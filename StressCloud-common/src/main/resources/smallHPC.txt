@@ -1,0 +1,31 @@
+Sujet :
+simulation de calcul HPC
+
+4 machines
+
+release();
+W=3600000;
+need(4);
+s = require(null, 4);
+s1=s[0];s2=s[1];s3=s[2];s4=s[3];
+s1[CPU].add W;
+sync(s1);
+s1[CPU].add W;
+s2[CPU].add 3*W;
+s3[CPU].add 3*W;
+sync(s1);
+s4[CPU].add W;
+sync(s);
+
+
+//petit test entre deux VMs
+W=1024.0*1024*3.0; release(); need(2); 
+s1=require(null); s2=require(null);
+s1.store("ip", "192.168.0.0");s2.store("ip", "192.168.0.0");
+s1.send(s2, W); sync(s1); s2.send(s1, W); sleep(2); release();
+
+2 machines, un peu de burn sur une pendant quelques secondes puis sur l'autre et on recommence avec un while true.
+W=1024.0*1024*1024*5.0; release(); need(2); 
+s1=require(null); s2=require(null);
+s1.store("ip", "192.168.0.0");s2.store("ip", "192.168.0.0");
+while(true) << s1.send(s2, W); sync(s1); s2.send(s1, W); sync(s2)>>

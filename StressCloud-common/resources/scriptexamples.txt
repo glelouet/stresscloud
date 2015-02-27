@@ -1,0 +1,14 @@
+
+
+test de séquentialité des charges CPU :
+
+sleepms=20*60*1000;release(); vms=require(null, 4); vm=vms[0];
+vm[CPU].onLoadChange << vms.each << it.cpu=vm[CPU].load>> >>;
+vm.cpu=2000; sleep(sleepms); vm.cpu=0;
+
+
+test de séquentialité des Work CPU : (tourne pendant environ une heure)
+
+release(); vms=require(null, 8); vm=vms[0];
+vm[CPU].onWorkChange << vms.each << it[CPU].work=vm[CPU].work>> >>;
+vm[CPU].work=1000*60*60;

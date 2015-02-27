@@ -1,0 +1,33 @@
+15:30:43.299  script <release(); vms=require(null, 8);vms.each { it[CPU].work=3000*3600*0.1}> resulted in <[VM{id=1, ip=172.28.2.142, cores=1}, VM{id=2, ip=172.28.2.61, cores=1}, VM{id=3, ip=172.28.2.36, cores=1}, VM{id=4, ip=172.28.2.165, cores=1}, VM{id=5, ip=172.28.3.252, cores=1}, VM{id=6, ip=172.28.3.138, cores=1}, VM{id=7, ip=172.28.2.169, cores=1}, VM{id=8, ip=172.28.2.25, cores=1}]>
+
+Migrer la machine virtuelle
+burner02
+01/03/2012 15:35:01
+01/03/2012 15:35:56
+
+Migrer la machine virtuelle
+burner04
+01/03/2012 15:35:02
+01/03/2012 15:35:59
+
+Migrer la machine virtuelle
+burner06
+01/03/2012 15:40:01
+01/03/2012 15:41:26
+
+Migrer la machine virtuelle
+burner01
+01/03/2012 15:40:01
+01/03/2012 15:41:05
+
+Migrer la machine virtuelle
+burner05
+01/03/2012 15:45:01
+01/03/2012 15:45:47
+
+Migrer la machine virtuelle
+burner07
+01/03/2012 15:45:01
+01/03/2012 15:45:54
+
+15:46:09.648  finished sync over [VM{id=1, ip=172.28.2.142, cores=1}, VM{id=2, ip=172.28.2.61, cores=1}, VM{id=3, ip=172.28.2.36, cores=1}, VM{id=4, ip=172.28.2.165, cores=1}, VM{id=5, ip=172.28.3.252, cores=1}, VM{id=6, ip=172.28.3.138, cores=1}, VM{id=7, ip=172.28.2.169, cores=1}, VM{id=8, ip=172.28.2.25, cores=1}]

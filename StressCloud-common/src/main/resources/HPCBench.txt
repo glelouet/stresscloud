@@ -1,0 +1,43 @@
+Sujet : 
+simulation de calcul HPC
+
+Variables :
+W, le travail sur un calcul (typiquement, pour 30 min et des machines à 2000 BOGOMIPS, on aura W=2000*60*30= 3 600 000 BOGOMI)
+S, la taille d'une transmission d'une VM à une autre. On prendra S= 1Go = 1073741824 o
+
+Modèle :
+demande 9 VMs esclaves, +1 répartiteur(VM0). Toutes les VMs doivent être les mêmes.
+- le répartiteur envoie S de données à VM1. Celle ci fait un calcul de W
+- VM1 envoie S à VM2 et VM3, qui démarrent un calcul de W. VM1 envoie S à VM3, qui démarre un calcul de W.
+- une fois que VM2 et VM3 ont terminé, VM1 envoie S à VM4-6,  qui démarrent W chacune.
+- une fois que toutes ces VMs ont terminé, VM1 et VM2  exécutent W.
+
+release();
+N=10;
+W=3600000;
+S=1073741824;
+need(N); s=require(null,N);r=s[0];
+r.send(s[1], S);r.after();
+s[1][CPU].work=W;s[1].after();
+s[1].send(s[2], S);sync(s[1]);
+s[1].send(s[3], S);s[2][CPU].work=W;sync(s[1]);s[3][CPU].work=W;
+sync(s[2], s[3]);
+s[2].send(s[4], S);
+s[3].send(s[7], S);
+sync(s[2], s[3])
+s[2].send(s[5], S);
+s[3].send(s[8], S);
+s[4][CPU].work=W;
+s[7][CPU].work=W;
+sync(s[2], s[3]);
+s[2].send(s[6], S);
+s[3].send(s[9], S);
+s[5][CPU].work=W;
+s[8][CPU].work=W;
+sync(s[2], s[3]);
+s[6][CPU].work=W;
+s[9][CPU].work=W;
+sync(s);
+s[1].work=W;
+s[2].work=W;
+sync(s);

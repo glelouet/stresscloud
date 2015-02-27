@@ -1,0 +1,234 @@
+19:56:22.227 [main] DEBUG fr.lelouet.stress.export.AEntryPoint - resending 0 vms to the listener : fr.lelouet.stress.export.BasicVMListener@518bf072
+19:56:22.227 [Thread-0] DEBUG f.l.stress.export.tcp.TCPEntryPoint - waiting for incomming VMs connexions
+19:56:22.255 [main] DEBUG fr.lelouet.stress.BurstStress - new max load for fr.lelouet.stress.ram.UnsafeRamWriterStress@671381e7 : 51682.25748100677
+19:56:22.283 [Thread-1] DEBUG f.l.stress.export.tcp.PrepareTwoVMs - exporting vm fr.lelouet.stress.export.tcp.TCPExporter@42e020c9
+19:56:22.294 [main] DEBUG fr.lelouet.stress.BurstStress - new max load for fr.lelouet.stress.ram.UnsafeRamWriterStress@30384065 : 329163.92363396974
+19:56:22.295 [Thread-5] DEBUG f.l.stress.export.tcp.PrepareTwoVMs - exporting vm fr.lelouet.stress.export.tcp.TCPExporter@3794d372
+19:56:22.300 [Thread-1] INFO  f.l.stress.export.tcp.TCPExporter - connected to 127.0.0.1:9090 with id 1
+19:56:22.300 [Thread-0] INFO  fr.lelouet.stress.export.AEntryPoint - new vm : VM{id=1, ip=null, cores=1}
+19:56:22.314 [Thread-0] DEBUG f.l.stress.export.tcp.TCPEntryPoint - waiting for incomming VMs connexions
+19:56:22.315 [Thread-5] INFO  f.l.stress.export.tcp.TCPExporter - connected to 127.0.0.1:9090 with id 2
+19:56:22.315 [Thread-0] INFO  fr.lelouet.stress.export.AEntryPoint - new vm : VM{id=2, ip=null, cores=1}
+19:56:22.315 [Thread-0] DEBUG f.l.stress.export.tcp.TCPEntryPoint - waiting for incomming VMs connexions
+19:56:22.321 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=STO ip=192.168.18.148
+19:56:22.324 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=STO ip=192.168.18.148
+19:56:22.339 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:22.343 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:22.360 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=STO cores=4
+19:56:22.360 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=STO cores=4
+19:56:22.360 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=STO freq=0
+19:56:22.360 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=STO freq=0
+19:56:22.360 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=STO mem=12558655488
+19:56:22.360 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=STO mem=12558655488
+19:56:22.603 [main] DEBUG fr.lelouet.stress.export.AEntryPoint - resending 2 vms to the listener : fr.lelouet.stress.control.BasicVMRegistar@41021f34
+19:56:22.771 [main] INFO  fr.lelouet.stress.RestExecutor - executing request on http://<ip>:8090/execute
+19:56:26.959 [pool-1-thread-1] DEBUG fr.lelouet.stress.RestExecutor - executing script : W=1024.0*1024*30.0; release(); need(2);s1=require(null); s2=require(null);s1.store("ip", "192.168.0.0");s2.store("ip", "192.168.0.0");s1.send(s2, W); sync(s1); s2.send(s1, W); sleep(2); release();
+19:56:27.401 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 1=SET NET.target=192.168.0.0
+19:56:27.403 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 2=SET NET.work=3.145728E7
+19:56:27.403 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(1=SET NET.target=192.168.0.0) remaining semaphores : 0
+19:56:27.404 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 3=SYN null
+19:56:27.404 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 4=GET CPU.load
+19:56:27.404 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 1=SET NET.target=192.168.0.0, parsed in command 1=SET NET.target=192.168.0.0
+19:56:27.405 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:27.406 [Thread-17] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 192.168.0.0 to command id 1
+19:56:27.406 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 1=192.168.0.0
+19:56:27.407 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(1=192.168.0.0)->1 permits
+19:56:27.407 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(2=SET NET.work=3.145728E7) remaining semaphores : 0
+19:56:27.407 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 2=SET NET.work=3.145728E7, parsed in command 2=SET NET.work=3.145728E7
+19:56:27.407 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:27.407 [Thread-18] DEBUG fr.lelouet.stress.BurstStress - adding work: 3.145728E7
+19:56:27.407 [Thread-18] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 3.145728E7 to command id 2
+19:56:27.407 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 2=3.145728E7
+19:56:27.408 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(2=3.145728E7)->1 permits
+19:56:27.408 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(3=SYN null) remaining semaphores : 0
+19:56:27.408 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 3=SYN null, parsed in command 3=SYN null
+19:56:27.409 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:27.409 [Thread-19] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.cpu.CPUMIPSStress getting the after lock
+19:56:27.409 [Thread-19] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.cpu.CPUMIPSStress quitting after cause no work en cours
+19:56:27.409 [Thread-19] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.net.UDPSenderStress getting the after lock
+19:56:30.006 [Thread-4] DEBUG fr.lelouet.stress.BurstStress - unlocking the after()
+19:56:30.006 [Thread-19] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.net.UDPSenderStressgot the semaphore after work
+19:56:30.006 [Thread-19] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.ram.UnsafeRamWriterStress getting the after lock
+19:56:30.006 [Thread-19] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.ram.UnsafeRamWriterStress quitting after cause no work en cours
+19:56:30.006 [Thread-19] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0 to command id 3
+19:56:30.007 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 3=0
+19:56:30.007 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(3=0)->1 permits
+19:56:30.007 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(4=GET CPU.load) remaining semaphores : 0
+19:56:30.008 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 4=GET CPU.load, parsed in command 4=GET CPU.load
+19:56:30.008 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.008 [Thread-20] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 4
+19:56:30.009 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 4=0.0
+19:56:30.009 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(4=0.0)->1 permits
+19:56:30.010 [pool-1-thread-1] DEBUG f.l.stress.control.BasicVMRegistar - finished sync over [VM{id=1, ip=192.168.0.0, cores=4}]
+19:56:30.010 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 1=SET NET.target=192.168.0.0
+19:56:30.010 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 2=SET NET.work=3.145728E7
+19:56:30.011 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(1=SET NET.target=192.168.0.0) remaining semaphores : 0
+19:56:30.011 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 1=SET NET.target=192.168.0.0, parsed in command 1=SET NET.target=192.168.0.0
+19:56:30.012 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.012 [Thread-21] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 192.168.0.0 to command id 1
+19:56:30.012 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 1=192.168.0.0
+19:56:30.013 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(1=192.168.0.0)->1 permits
+19:56:30.013 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(2=SET NET.work=3.145728E7) remaining semaphores : 0
+19:56:30.013 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.cancel() -> 1 permits
+19:56:30.013 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 5=SET CPU.load=0.0
+19:56:30.013 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 6=SET NET.load=0.0
+19:56:30.013 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 2=SET NET.work=3.145728E7, parsed in command 2=SET NET.work=3.145728E7
+19:56:30.013 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 7=SET RAM.load=0.0
+19:56:30.013 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.014 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.cancel() -> 1 permits
+19:56:30.014 [Thread-22] DEBUG fr.lelouet.stress.BurstStress - adding work: 3.145728E7
+19:56:30.014 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 3=SET CPU.load=0.0
+19:56:30.014 [Thread-22] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 3.145728E7 to command id 2
+19:56:30.014 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 4=SET NET.load=0.0
+19:56:30.014 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(5=SET CPU.load=0.0) remaining semaphores : 1
+19:56:30.014 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 5=SET RAM.load=0.0
+19:56:30.014 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 2=3.145728E7
+19:56:30.015 [pool-1-thread-1] DEBUG fr.lelouet.stress.RestExecutor - scritp <W=1024.0*1024*30.0; release(); need(2);s1=require(null); s2=require(null);s1.store("ip", "192.168.0.0");s2.store("ip", "192.168.0.0");s1.send(s2, W); sync(s1); s2.send(s1, W); sleep(2); release();> resulted in <null>
+19:56:30.015 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(3=SET CPU.load=0.0) remaining semaphores : 0
+19:56:30.015 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 5=SET CPU.load=0.0, parsed in command 5=SET CPU.load=0.0
+19:56:30.015 [Thread-11] WARN  f.l.stress.control.BasicRegisteredVM - ans(2):3.145728E7 for unregistered command 2
+19:56:30.015 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(6=SET NET.load=0.0) remaining semaphores : 0
+19:56:30.015 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.015 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 3=SET CPU.load=0.0, parsed in command 3=SET CPU.load=0.0
+19:56:30.016 [Thread-23] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:30.016 [Thread-23] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 5
+19:56:30.017 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 5=0.0
+19:56:30.017 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 6=SET NET.load=0.0, parsed in command 6=SET NET.load=0.0
+19:56:30.018 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(7=SET RAM.load=0.0) remaining semaphores : 0
+19:56:30.017 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.017 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(5=0.0)->1 permits
+19:56:30.023 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.023 [Thread-24] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:30.024 [Thread-24] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 3
+19:56:30.024 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 3=0.0
+19:56:30.024 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(3=0.0)->1 permits
+19:56:30.024 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(4=SET NET.load=0.0) remaining semaphores : 0
+19:56:30.025 [Thread-25] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:30.025 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 4=SET NET.load=0.0, parsed in command 4=SET NET.load=0.0
+19:56:30.025 [Thread-25] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 6
+19:56:30.026 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 6=0.0
+19:56:30.026 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(6=0.0)->1 permits
+19:56:30.026 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 7=SET RAM.load=0.0, parsed in command 7=SET RAM.load=0.0
+19:56:30.029 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.029 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.029 [Thread-26] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:30.029 [Thread-26] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 4
+19:56:30.030 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 4=0.0
+19:56:30.030 [Thread-27] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:30.030 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(4=0.0)->1 permits
+19:56:30.030 [Thread-27] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 7
+19:56:30.031 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 7=0.0
+19:56:30.031 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(5=SET RAM.load=0.0) remaining semaphores : 0
+19:56:30.032 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(7=0.0)->1 permits
+19:56:30.032 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 5=SET RAM.load=0.0, parsed in command 5=SET RAM.load=0.0
+19:56:30.032 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:30.032 [Thread-28] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:30.033 [Thread-28] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 5
+19:56:30.033 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 5=0.0
+19:56:30.034 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(5=0.0)->1 permits
+19:56:30.092 [Thread-8] DEBUG fr.lelouet.stress.BurstStress - unlocking the after()
+19:56:37.623 [pool-1-thread-1] DEBUG fr.lelouet.stress.RestExecutor - executing script : W=1024.0*1024*30.0; release(); need(2);s1=require(null); s2=require(null);s1.store("ip", "192.168.0.0");s2.store("ip", "192.168.0.0");s1.send(s2, W); sync(s1); s2.send(s1, W); sleep(2); release();
+19:56:37.664 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 8=SET NET.target=192.168.0.0
+19:56:37.664 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 9=SET NET.work=3.145728E7
+19:56:37.664 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(8=SET NET.target=192.168.0.0) remaining semaphores : 1
+19:56:37.664 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 10=SYN null
+19:56:37.665 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 11=GET CPU.load
+19:56:37.665 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 8=SET NET.target=192.168.0.0, parsed in command 8=SET NET.target=192.168.0.0
+19:56:37.665 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.665 [Thread-29] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 192.168.0.0 to command id 8
+19:56:37.665 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(9=SET NET.work=3.145728E7) remaining semaphores : 0
+19:56:37.665 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 8=192.168.0.0
+19:56:37.667 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(8=192.168.0.0)->1 permits
+19:56:37.667 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(10=SYN null) remaining semaphores : 0
+19:56:37.667 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 9=SET NET.work=3.145728E7, parsed in command 9=SET NET.work=3.145728E7
+19:56:37.667 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.667 [Thread-30] DEBUG fr.lelouet.stress.BurstStress - adding work: 3.145728E7
+19:56:37.668 [Thread-30] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 3.145728E7 to command id 9
+19:56:37.668 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 9=3.145728E7
+19:56:37.668 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(9=3.145728E7)->1 permits
+19:56:37.668 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 10=SYN null, parsed in command 10=SYN null
+19:56:37.669 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.669 [Thread-31] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.cpu.CPUMIPSStress getting the after lock
+19:56:37.669 [Thread-31] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.cpu.CPUMIPSStress quitting after cause no work en cours
+19:56:37.669 [Thread-31] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.net.UDPSenderStress getting the after lock
+19:56:37.670 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(11=GET CPU.load) remaining semaphores : 0
+19:56:37.708 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 11=GET CPU.load, parsed in command 11=GET CPU.load
+19:56:37.709 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.709 [Thread-32] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 11
+19:56:37.709 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 11=0.0
+19:56:37.709 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(11=0.0)->1 permits
+19:56:37.709 [pool-1-thread-1] DEBUG f.l.stress.control.BasicVMRegistar - finished sync over [VM{id=1, ip=192.168.0.0, cores=4}]
+19:56:37.710 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 6=SET NET.target=192.168.0.0
+19:56:37.710 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 7=SET NET.work=3.145728E7
+19:56:37.711 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(6=SET NET.target=192.168.0.0) remaining semaphores : 0
+19:56:37.712 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 6=SET NET.target=192.168.0.0, parsed in command 6=SET NET.target=192.168.0.0
+19:56:37.712 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.712 [Thread-33] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 192.168.0.0 to command id 6
+19:56:37.712 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 6=192.168.0.0
+19:56:37.713 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(6=192.168.0.0)->1 permits
+19:56:37.713 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(7=SET NET.work=3.145728E7) remaining semaphores : 0
+19:56:37.713 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.cancel() -> 1 permits
+19:56:37.716 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 12=SET CPU.load=0.0
+19:56:37.717 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 13=SET NET.load=0.0
+19:56:37.717 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(1): 14=SET RAM.load=0.0
+19:56:37.717 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 7=SET NET.work=3.145728E7, parsed in command 7=SET NET.work=3.145728E7
+19:56:37.717 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.cancel() -> 1 permits
+19:56:37.717 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 8=SET CPU.load=0.0
+19:56:37.717 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 9=SET NET.load=0.0
+19:56:37.717 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.717 [pool-1-thread-1] DEBUG f.l.stress.control.BasicRegisteredVM - add(2): 10=SET RAM.load=0.0
+19:56:37.717 [pool-1-thread-1] DEBUG fr.lelouet.stress.RestExecutor - scritp <W=1024.0*1024*30.0; release(); need(2);s1=require(null); s2=require(null);s1.store("ip", "192.168.0.0");s2.store("ip", "192.168.0.0");s1.send(s2, W); sync(s1); s2.send(s1, W); sleep(2); release();> resulted in <null>
+19:56:37.718 [Thread-34] DEBUG fr.lelouet.stress.BurstStress - adding work: 3.145728E7
+19:56:37.718 [Thread-34] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 3.145728E7 to command id 7
+19:56:37.718 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 7=3.145728E7
+19:56:37.718 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(8=SET CPU.load=0.0) remaining semaphores : 0
+19:56:37.718 [Thread-11] WARN  f.l.stress.control.BasicRegisteredVM - ans(2):3.145728E7 for unregistered command 7
+19:56:37.719 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(12=SET CPU.load=0.0) remaining semaphores : 1
+19:56:37.721 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 12=SET CPU.load=0.0, parsed in command 12=SET CPU.load=0.0
+19:56:37.721 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(13=SET NET.load=0.0) remaining semaphores : 0
+19:56:37.722 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.722 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 8=SET CPU.load=0.0, parsed in command 8=SET CPU.load=0.0
+19:56:37.723 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.723 [Thread-35] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:37.723 [Thread-35] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 12
+19:56:37.723 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 12=0.0
+19:56:37.723 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 13=SET NET.load=0.0, parsed in command 13=SET NET.load=0.0
+19:56:37.723 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(12=0.0)->1 permits
+19:56:37.723 [Thread-10] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.send(14=SET RAM.load=0.0) remaining semaphores : 0
+19:56:37.724 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.723 [Thread-36] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:37.725 [Thread-37] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:37.725 [Thread-37] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 13
+19:56:37.725 [Thread-36] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 8
+19:56:37.726 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - read line 14=SET RAM.load=0.0, parsed in command 14=SET RAM.load=0.0
+19:56:37.726 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 8=0.0
+19:56:37.726 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(8=0.0)->1 permits
+19:56:37.725 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 13=0.0
+19:56:37.726 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(13=0.0)->1 permits
+19:56:37.726 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(9=SET NET.load=0.0) remaining semaphores : 0
+19:56:37.726 [Thread-1] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.728 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 9=SET NET.load=0.0, parsed in command 9=SET NET.load=0.0
+19:56:37.728 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.732 [Thread-39] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:37.733 [Thread-39] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 9
+19:56:37.733 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 9=0.0
+19:56:37.733 [Thread-38] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:37.733 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(9=0.0)->1 permits
+19:56:37.733 [Thread-12] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.send(10=SET RAM.load=0.0) remaining semaphores : 0
+19:56:37.733 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - read line 10=SET RAM.load=0.0, parsed in command 10=SET RAM.load=0.0
+19:56:37.734 [Thread-5] DEBUG f.l.stress.export.tcp.TCPExporter - acquiring next command
+19:56:37.734 [Thread-40] DEBUG fr.lelouet.stress.BurstStress - load set to 0.0, work=0.0
+19:56:37.734 [Thread-40] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 10
+19:56:37.734 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.rec()=ANS 10=0.0
+19:56:37.734 [Thread-11] DEBUG f.l.stress.control.BasicRegisteredVM - vm2.anwer(10=0.0)->1 permits
+19:56:37.737 [Thread-38] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0.0 to command id 14
+19:56:37.737 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 14=0.0
+19:56:37.737 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.anwer(14=0.0)->1 permits
+19:56:37.875 [Thread-8] DEBUG fr.lelouet.stress.BurstStress - unlocking the after()
+19:56:37.880 [Thread-4] DEBUG fr.lelouet.stress.BurstStress - unlocking the after()
+19:56:37.880 [Thread-31] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.net.UDPSenderStressgot the semaphore after work
+19:56:37.880 [Thread-31] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.ram.UnsafeRamWriterStress getting the after lock
+19:56:37.880 [Thread-31] DEBUG fr.lelouet.stress.BurstStress - fr.lelouet.stress.ram.UnsafeRamWriterStress quitting after cause no work en cours
+19:56:37.880 [Thread-31] DEBUG f.l.stress.export.tcp.TCPExporter - sending ans : 0 to command id 10
+19:56:37.880 [Thread-9] DEBUG f.l.stress.control.BasicRegisteredVM - vm1.rec()=ANS 10=0
+19:56:37.880 [Thread-9] WARN  f.l.stress.control.BasicRegisteredVM - ans(1):0 for unregistered command 10

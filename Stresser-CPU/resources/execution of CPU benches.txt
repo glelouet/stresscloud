@@ -1,0 +1,8 @@
+export exec="target/stress-CPU-0.11.1-jar-with-dependencies.jar";\
+export loads="1 500 1000 1500 2000 3000 4000 5000 6000 8000 10000 12000 14000";\
+for threads in 1 4 16; do
+ for loop in 5 20 100 500; do
+  name=benches/cpuBench-"$loop"ms-"$threads"x;
+  echo -n | java -jar "$exec" "loop=$loop" "threads=$threads" sleep=2 benchfor=20 export="$name.csv" $loads graph="$name.png"; done
+ done
+done
