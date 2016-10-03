@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>StressCloud</artifactId>
 		<groupId>fr.lelouet.stresscloud</groupId>
-		<version>1.3.0-SNAPSHOT</version>
+		<version>1.3.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>singleBurner</artifactId>
 	<dependencies>
