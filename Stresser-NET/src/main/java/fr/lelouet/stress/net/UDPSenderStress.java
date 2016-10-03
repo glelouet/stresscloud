@@ -4,7 +4,7 @@ package fr.lelouet.stress.net;
  * #%L
  * stresscloud
  * %%
- * Copyright (C) 2012 - 2015 Mines de Nantes
+ * Copyright (C) 2012 - 2016 Mines de Nantes
  * %%
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as

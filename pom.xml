@@ -59,9 +59,9 @@
 
 	<packaging>pom</packaging>
 	<scm>
-		<developerConnection>scm:git:ssh://git@ns355283.ip-91-121-120.eu/root/stresscloud.git</developerConnection>
-		<connection>scm:git:ssh://git@ns355283.ip-91-121-120.eu/root/stresscloud.git</connection>
-		<url>scm:git:ssh://git@ns355283.ip-91-121-120.eu/root/stresscloud.git</url>
+		<developerConnection>scm:git:git@github.com:glelouet/stresscloud.git</developerConnection>
+		<connection>scm:git:git://github.com/glelouet/stresscloud.git</connection>
+		<url>https://github.com/glelouet/stresscloud</url>
 	</scm>
 	<modules>
 		<module>StressCloud-common</module>
@@ -74,7 +74,7 @@
 		<module>singleBurner</module>
 	</modules>
 	<properties>
-		<tooling.version>0.3.10</tooling.version>
+		<tooling.version>0.3.11</tooling.version>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -138,11 +138,6 @@
 				<version>${project.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>fr.lelouet.tooling</groupId>
-				<artifactId>regression</artifactId>
-				<version>${tooling.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>fr.lelouet.tooling</groupId>
 				<artifactId>sorters</artifactId>
@@ -217,11 +212,11 @@
 			<url>http://btrcloud.org/maven/</url>
 		</repository>
 		<repository>
-			<id>LeLouet-stable</id>
+			<id>Lkimsufi-maven</id>
 			<url>http://91.121.120.36/maven/stable</url>
 		</repository>
 		<repository>
-			<id>LeLouet-snapshot</id>
+			<id>kimsufi-maven</id>
 			<url>http://91.121.120.36/maven/snapshot</url>
 		</repository>
 		<repository>
@@ -238,14 +233,14 @@
 	</repositories>
 
 	<distributionManagement>
-        <repository>
-            <id>kimsufi-repository</id>
-            <url>ftp://91.121.120.36:12345/stable</url>
-        </repository>
-        <snapshotRepository>
-            <id>kimsufi-repository</id>
-            <url>ftp://91.121.120.36:12345/snapshot</url>
-        </snapshotRepository>
+		<repository>
+			<id>kimsufi-maven</id>
+			<url>ftp://91.121.120.36:12345/stable</url>
+		</repository>
+		<snapshotRepository>
+			<id>kimsufi-maven</id>
+			<url>ftp://91.121.120.36:12345/snapshot</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<build>
