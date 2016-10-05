@@ -73,7 +73,7 @@
 		<module>singleBurner</module>
 	</modules>
 	<properties>
-		<tooling.version>0.3.11</tooling.version>
+		<tooling.version>1.3.11</tooling.version>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
